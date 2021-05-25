@@ -12,4 +12,4 @@ Usage: python chargepol.py
 
 Output: NetCDF file with polarity of a charge layer, time of a charge layer in seconds after 0 UTC, charge layer bottom altitude in km, charge layer width in km, east-west distance from network center in km, south-north distance from network center in km.
 
-Reference: Medina et al., submitted to AGU ESS
+Reference: Medina et al., submitted to AGU ESS.
