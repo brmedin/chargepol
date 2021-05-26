@@ -12,4 +12,6 @@ Usage: python chargepol.py
 
 Output: NetCDF file with polarity of a charge layer ('pos' or 'neg'), time of a charge layer in seconds after 0 UTC, charge layer bottom altitude in km, charge layer vertical depth in km, east-west distance from LMA center in km, south-north distance from LMA center in km.
 
-Reference: Medina et al., submitted to AGU ESS.
+Reference: 
+
+Medina, B. L., Carey, L. D., Lang, J. T., Bitzer, P. M., Deierling, W., Zhu, Y. (2021). Characterizing charge structure in Central Argentina thunderstorms during RELAMPAGO utilizing a new charge layer polarity identification method. Earth and Space Science. In revision (pending major revisions). https://doi.org/10.1002/essoar.10506781.1
