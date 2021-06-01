@@ -14,4 +14,4 @@ Output: NetCDF file with polarity of a charge layer ('pos' or 'neg'), time of a 
 
 Reference: 
 
-Medina, B. L., Carey, L. D., Lang, J. T., Bitzer, P. M., Deierling, W., Zhu, Y. (2021). Characterizing charge structure in Central Argentina thunderstorms during RELAMPAGO utilizing a new charge layer polarity identification method. Earth and Space Science. In revision (pending major revisions). https://doi.org/10.1002/essoar.10506781.1
+Medina, B. L., Carey, L. D., Lang, J. T., Bitzer, P. M., Deierling, W., Zhu, Y. (2021). Characterizing charge structure in Central Argentina thunderstorms during RELAMPAGO utilizing a new charge layer polarity identification method. Earth and Space Science. In revision (pending major revisions). https://doi.org/10.1002/essoar.10506781.2
