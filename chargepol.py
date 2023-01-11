@@ -121,11 +121,11 @@ def read_lma(file, netw_center, max_range, nsou):
         lma_lon.append([events[b][5]])
         lma_t.append([events[b][9]])
 
-    lma_lat = np.array(lma_lat, np.dtype(np.float))
-    lma_lon = np.array(lma_lon, np.dtype(np.float))
-    lma_z = np.array(lma_z, np.dtype(np.float))
-    lma_t = np.array(lma_t, np.dtype(np.float))
-    lma_flid = np.array(lma_flid, np.dtype(np.float))
+    lma_lat = np.array(lma_lat, np.dtype(float))
+    lma_lon = np.array(lma_lon, np.dtype(float))
+    lma_z = np.array(lma_z, np.dtype(float))
+    lma_t = np.array(lma_t, np.dtype(float))
+    lma_flid = np.array(lma_flid, np.dtype(float))
 
     # Convert LMA lat,lon to x,y relative to the center of nework 
     Re = 6356 # Earth radius in km
@@ -153,9 +153,9 @@ def read_lma(file, netw_center, max_range, nsou):
             flx.append([flcent_x])
             fly.append([flcent_y])
     
-    flid = np.array(flid, np.dtype(np.float))
-    flx = np.array(flx, np.dtype(np.float))
-    fly = np.array(fly, np.dtype(np.float))
+    flid = np.array(flid, np.dtype(float))
+    flx = np.array(flx, np.dtype(float))
+    fly = np.array(fly, np.dtype(float))
 
     return lma_x, lma_y, lma_z, lma_t, lma_flid, flid, flx, fly
 
@@ -245,16 +245,16 @@ def write_output(filename_output, pos_time, pos_zmin, pos_zwid, pos_flax, pos_fl
 
     """
     
-    pos_time = np.array(pos_time, np.dtype(np.float))
-    pos_zmin = np.array(pos_zmin, np.dtype(np.float))
-    pos_zwid = np.array(pos_zwid, np.dtype(np.float))
-    pos_flax = np.array(pos_flax, np.dtype(np.float))
-    pos_flay = np.array(pos_flay, np.dtype(np.float))
-    neg_time = np.array(neg_time, np.dtype(np.float))
-    neg_zmin = np.array(neg_zmin, np.dtype(np.float))
-    neg_zwid = np.array(neg_zwid, np.dtype(np.float))
-    neg_flax = np.array(neg_flax, np.dtype(np.float))
-    neg_flay = np.array(neg_flay, np.dtype(np.float))
+    pos_time = np.array(pos_time, np.dtype(float))
+    pos_zmin = np.array(pos_zmin, np.dtype(float))
+    pos_zwid = np.array(pos_zwid, np.dtype(float))
+    pos_flax = np.array(pos_flax, np.dtype(float))
+    pos_flay = np.array(pos_flay, np.dtype(float))
+    neg_time = np.array(neg_time, np.dtype(float))
+    neg_zmin = np.array(neg_zmin, np.dtype(float))
+    neg_zwid = np.array(neg_zwid, np.dtype(float))
+    neg_flax = np.array(neg_flax, np.dtype(float))
+    neg_flay = np.array(neg_flay, np.dtype(float))
 
     e = open(filename_output, 'a')
 
@@ -286,7 +286,6 @@ neg_flay = []
 for i in range(0,len(filenames)): 
 
     file = filenames[i]
-    print(file)
        
     # Read LMA data:    
     lma_x, lma_y, lma_z, lma_t, lma_flid, flid, flx, fly = read_lma(file, netw_center, max_range, nsou)
