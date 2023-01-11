@@ -27,10 +27,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Define parameters:
-    
-# Date in YYMMDD format:
-date = '181205' 
-
 # Directory where LMA level 2 HDF5 files are saved:
 direct = '/home/user/lma/level2/'
 
@@ -98,11 +94,18 @@ def read_lma(file, netw_center, max_range, nsou):
     """
               
     # Read LMA data:    
+    print(f"Reading: {file}")
     data = h5py.File(file)
     len_file = int(len(file))
     hhmm = file[len_file-20:len_file-16]
-    events = np.array(data['events']['LMA_'+date+'_'+hhmm+'01_600'])
-    flashes = np.array(data['flashes']['LMA_'+date+'_'+hhmm+'01_600'])
+    date = file.split("_")[-3]
+    hhmm = file.split("_")[-2]
+    if len(list(data['events'].keys())) == 1:
+        events = np.array(data['events'][list(data['events'].keys())[0]])
+        flashes = np.array(data['flashes'][list(data['events'].keys())[0]])
+    else:
+        events = np.array(data['events']['LMA_'+date+'_'+hhmm+'_600'])
+        flashes = np.array(data['flashes']['LMA_'+date+'_'+hhmm+'_600'])
      
     # Save Events: 
     lma_lat = []
@@ -399,7 +402,7 @@ for i in range(0,len(filenames)):
                         neg_flay.append([fly[j]])
                     
 # Save charge layers output:
-filename_output = 'chargepol_20'+date+'.nc'
+filename_output = 'chargepol.nc'
 write_out = write_output(filename_output, pos_time, pos_zmin, pos_zwid, pos_flax, pos_flay, neg_time, neg_zmin, neg_zwid, neg_flax, neg_flay  )
 
 print('Done')
