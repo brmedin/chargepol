@@ -13,8 +13,8 @@ Output: NetCDF file with polarity of a charge layer, time of a charge layer in s
 charge layer bottom altitude in km, charge layer width in km, east-west distance from network center in km, 
 south-north distance from network center in km.
 
-Please refer to Medina et al., submitted to AGU ESS
-Or contact blm0032@uah.edu
+Please refer to Medina et al., 2021, AGU ESS
+Or contact bruno.medina@colorado.edu
 
 Created on 04/23/2020
 """
