@@ -189,7 +189,7 @@ def regression_pb(lma_t_fl, lma_z_fl, min_t, max_pb_dur):
     
     return ch_hgt_thresh, pb_vert_speed, mse 
 
-def write_output(filename_output, pos_time, pos_zmin, pos_zwid, pos_flax, pos_flay, pos_fla_lon, pos_fla_lat, neg_time, neg_zmin, neg_zwid, neg_fla_lon, neg_fla_lat, neg_flax, neg_flay):
+def write_output(filename_output, pos_time, pos_zmin, pos_zwid, pos_flax, pos_flay, pos_fla_lon, pos_fla_lat, neg_time, neg_zmin, neg_zwid, neg_flax, neg_flay, neg_fla_lon, neg_fla_lat):
      
     """
     Write output to a .nc file.
