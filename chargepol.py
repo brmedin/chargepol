@@ -14,7 +14,7 @@ charge layer bottom altitude in km, charge layer width in km, east-west distance
 south-north distance from network center in km.
 
 Please refer to Medina et al., 2021, AGU ESS
-Or contact bruno.medina@colorado.edu
+Or contact bruno.medina@ttu.edu
 
 Created on 04/23/2020
 """
